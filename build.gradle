@@ -12,15 +12,15 @@ subprojects{
     dependencies {
         // https://mvnrepository.com/artifact/junit/junit
         testCompile group: 'junit', name: 'junit', version: '4.12'
+
+        // https://mvnrepository.com/artifact/org.springframework/spring-context
+        compile group: 'org.springframework', name: 'spring-context', version: '4.3.18.RELEASE'
     }
 }
 project(':common') {
     dependencies{
         // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
         compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
-
-        // https://mvnrepository.com/artifact/org.springframework/spring-context
-        compile group: 'org.springframework', name: 'spring-context', version: '4.3.18.RELEASE'
 
     }
 }
@@ -63,4 +63,8 @@ project (':tracker-core') {
     task fatJar(type: OneJar) {
         mainClass = 'jdev.tracker.Main'
     }
+}
+
+project (':scheduling') {
+    
 }
