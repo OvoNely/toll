@@ -3,7 +3,7 @@ package gn.dto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class PointDTO {
+public class Point {
     private double lat;
     private double lon;
     private String autoId;
@@ -13,7 +13,7 @@ public class PointDTO {
         return lat;
     }
 
-    public void setLat(double lat) {
+    public void setLat(double lat, boolean isTrust) {
         this.lat = lat;
     }
 
@@ -21,7 +21,7 @@ public class PointDTO {
         return lon;
     }
 
-    public void setLon(double lon) {
+    public void setLon(double lon, boolean isTrust) {
         this.lon = lon;
     }
 
@@ -40,18 +40,19 @@ public class PointDTO {
 
     @Override
     public String toString() {
-        return "PointDTO{" +
+        return "Point{" +
                 "lat=" + lat +
                 ", lon=" + lon +
                 ", autoId='" + autoId + '\'' +
                 '}';
     }
 
+    public long getTime() {
+        return time;
+    }
+
     public void setTime(long time) {
         this.time = time;
     }
 
-    public long getTime() {
-        return time;
-    }
 }
