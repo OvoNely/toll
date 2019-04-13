@@ -1,20 +1,13 @@
 package gn.tracker;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import gn.dto.Point;
+//import com.fasterxml.jackson.core.JsonProcessingException;
+//import gn.dto.Point;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String... args) throws Exception {
-        for (int i=0; i<5; i++) {
-            extractedMethod(45, false);
-        }
+        ApplicationContext context = new AnnotationConfigApplicationContext(InjectionContext.class);
     }
 
-    private static void extractedMethod(int lat, boolean isTrust) throws JsonProcessingException, InterruptedException {
-        System.out.println("Main.main say Hello!!!!");
-        Point point = new Point();
-        point.setLat(lat, isTrust);
-        System.out.println(point.toJson());
-        Thread.sleep(1000);
-    }
 }
