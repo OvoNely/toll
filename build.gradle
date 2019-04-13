@@ -68,3 +68,7 @@ project (':tracker-core') {
 project (':scheduling') {
     
 }
+
+project (':properties') {
+    
+}
