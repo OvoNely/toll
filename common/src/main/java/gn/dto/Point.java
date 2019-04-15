@@ -13,7 +13,7 @@ public class Point {
         return lat;
     }
 
-    public void setLat(double lat, boolean isTrust) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
@@ -21,7 +21,7 @@ public class Point {
         return lon;
     }
 
-    public void setLon(double lon, boolean isTrust) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 

@@ -5,16 +5,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 public class Location {
     Point point;
 
-    public static void meth() {
-
-    }
-
     public double getLat() {
         return point.getLat();
     }
 
     public void setLat(double lat, boolean isTrust) {
-        point.setLat(lat, isTrust);
+        point.setLat(lat);
     }
 
     public double getLon() {
@@ -22,7 +18,7 @@ public class Location {
     }
 
     public void setLon(double lon, boolean isTrust) {
-        point.setLon(lon, isTrust);
+        point.setLon(lon);
     }
 
     public String getAutoId() {

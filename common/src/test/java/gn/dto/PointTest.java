@@ -14,8 +14,8 @@ public class PointTest {
     @Test
     public void encodeDTO() throws Exception {
         Point point = new Point();
-        point.setLat(56, false);
-        point.setLon(74, true);
+        point.setLat(56);
+        point.setLon(74);
         point.setAutoId(autoId);
         point.setTime(System.currentTimeMillis());
         String pointJson = point.toJson();

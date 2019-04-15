@@ -13,8 +13,8 @@ public class PointTest {
     @Test
     public void toJson() throws Exception {
         Point point = new Point();
-        point.setLat(56, false);
-        point.setLon(74, true);
+        point.setLat(56);
+        point.setLon(74);
         point.setAutoId("o567gfd");
         point.setTime(System.currentTimeMillis());
         assertTrue(point.toJson().contains("\"lat\":56"));
