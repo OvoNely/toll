@@ -1,5 +1,6 @@
 package gn.tracker.services;
 
+import gn.dto.Point;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class DataPeekService {
 
     private static final Logger log = LoggerFactory.getLogger(DataPeekService.class);
-    static int count;
+//    static int count;
 
     @Autowired
     private DataSendService dataSendService;
@@ -25,15 +26,15 @@ public class DataPeekService {
         dataSendService.callFromInit();
     }
 
-    private BlockingDeque<String> qeque = new LinkedBlockingDeque<>(100);
+    private BlockingDeque<Point> queue = new LinkedBlockingDeque<>(100);
 
     @Scheduled(fixedRate = 500)
     void take () throws InterruptedException {
-        log.info("DataPeekService.take " + qeque.take());
+        log.info("DataPeekService.take " + queue.take());
     }
 
-    void put(String s) throws InterruptedException {
-        qeque.put(s);
+    void put(Point point) throws InterruptedException {
+        queue.put(point);
     }
 
 

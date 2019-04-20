@@ -45,6 +45,9 @@ public class Point {
         return "Point{" +
                 "lat=" + lat +
                 ", lon=" + lon +
+                ", azimuth=" + azimuth +
+                ", instant speed=" + instantSpeed +
+                ", instant time=" + time +
                 ", autoId='" + autoId + '\'' +
                 '}';
     }
