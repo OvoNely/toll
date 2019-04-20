@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Point {
     private double lat;
     private double lon;
+    private double azimuth;
+    private double instantSpeed;
     private String autoId;
     private long time;
 
