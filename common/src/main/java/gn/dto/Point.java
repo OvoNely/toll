@@ -57,4 +57,19 @@ public class Point {
         this.time = time;
     }
 
+    public double getInstantSpeed() {
+        return instantSpeed;
+    }
+
+    public void setInstantSpeed(double instantSpeed) {
+        this.instantSpeed = instantSpeed;
+    }
+
+    public double getAzimuth() {
+        return azimuth;
+    }
+
+    public void setAzimuth(double azimuth) {
+        this.azimuth = azimuth;
+    }
 }
