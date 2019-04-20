@@ -13,7 +13,7 @@ public class GPSService {
     @Autowired
     private DataPeekService peekService;
 
-    @Scheduled(cron = "${cron.prop}")
+    @Scheduled(cron = "${cronSec.prop}")
     private void coordinatesGeneration() throws InterruptedException {
         Point point = new Point();
         Random random = new Random(System.currentTimeMillis());
